@@ -572,7 +572,7 @@ public:
     virtual std::string getDescription() const override;
     
     /**
-     * @brief Get the the renderer size in auto mode.
+     * @brief Get the renderer size in auto mode.
      *
      * @return A delimitation zone.
      */
@@ -622,6 +622,30 @@ public:
      * @return The horizontal alignment
      */
     TextVAlignment getTextVerticalAlignment() const;
+    
+    /**
+     * Set enable cursor use.
+     * @js NA
+     */
+    void setCursorEnabled(bool enabled);
+    
+    /**
+     * Set char showing cursor.
+     * @js NA
+     */
+    void setCursorChar(char cursor);
+    
+    /**
+     * Set cursor position, if enabled
+     * @js NA
+     */
+    void setCursorPosition(std::size_t cursorPosition);
+    
+    /**
+     * Set cursor position to hit letter, if enabled
+     * @js NA
+     */
+    void setCursorFromPoint(const Vec2 &point, const Camera* camera);
     
 CC_CONSTRUCTOR_ACCESS:
     virtual bool init() override;

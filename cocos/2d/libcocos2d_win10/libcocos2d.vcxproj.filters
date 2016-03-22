@@ -263,6 +263,9 @@
     <Filter Include="cocostudio\reader\WidgetReader\GameNodeDReader">
       <UniqueIdentifier>{0760e708-a93e-41f5-abaf-a7e422882920}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cocostudio\reader\WidgetReader\Light3DReader">
+      <UniqueIdentifier>{549d5ddb-02ff-4b34-8e49-8fb7570ecff4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\cocos2d.cpp" />
@@ -1686,6 +1689,9 @@
     <ClCompile Include="..\..\ui\UIPageView.cpp">
       <Filter>ui\UIWidgets\ScrollWidget</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\ui\UIPageViewIndicator.cpp">
+      <Filter>ui\UIWidgets\ScrollWidget</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\ui\UIScrollView.cpp">
       <Filter>ui\UIWidgets\ScrollWidget</Filter>
     </ClCompile>
@@ -1759,6 +1765,9 @@
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="..\..\base\CCNinePatchImageParser.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\base\CCStencilStateManager.cpp">
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\..\renderer\CCMaterial.cpp">
@@ -1965,6 +1974,12 @@
     </ClCompile>
     <ClCompile Include="..\..\network\CCDownloader-curl.cpp">
       <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp">
+      <Filter>cocostudio\reader\WidgetReader\Light3DReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\editor-support\cocostudio\LocalizationManager.cpp">
+      <Filter>cocostudio\components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3626,6 +3641,9 @@
     <ClInclude Include="..\..\base\CCNinePatchImageParser.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\base\CCStencilStateManager.h">
+      <Filter>base</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\renderer\CCMaterial.h">
       <Filter>renderer</Filter>
     </ClInclude>
@@ -3844,6 +3862,12 @@
     </ClInclude>
     <ClInclude Include="..\..\network\CCIDownloaderImpl.h">
       <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.h">
+      <Filter>cocostudio\reader\WidgetReader\Light3DReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\editor-support\cocostudio\LocalizationManager.h">
+      <Filter>cocostudio\components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

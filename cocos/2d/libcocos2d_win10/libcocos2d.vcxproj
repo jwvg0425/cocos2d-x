@@ -415,6 +415,7 @@
     </ClCompile>
     <ClCompile Include="..\..\base\CCIMEDispatcher.cpp" />
     <ClCompile Include="..\..\base\CCNinePatchImageParser.cpp" />
+    <ClCompile Include="..\..\base\CCStencilStateManager.cpp" />
     <ClCompile Include="..\..\base\CCNS.cpp" />
     <ClCompile Include="..\..\base\CCProfiling.cpp" />
     <ClCompile Include="..\..\base\CCProperties.cpp" />
@@ -508,6 +509,7 @@
     <ClCompile Include="..\..\editor-support\cocostudio\CocoStudio.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\DictionaryHelper.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\FlatBuffersSerialize.cpp" />
+    <ClCompile Include="..\..\editor-support\cocostudio\LocalizationManager.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\TriggerBase.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\TriggerMng.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\TriggerObj.cpp" />
@@ -520,6 +522,7 @@
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.cpp" />
+    <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.cpp" />
     <ClCompile Include="..\..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.cpp" />
@@ -652,6 +655,7 @@
     <ClCompile Include="..\..\ui\UIListView.cpp" />
     <ClCompile Include="..\..\ui\UILoadingBar.cpp" />
     <ClCompile Include="..\..\ui\UIPageView.cpp" />
+    <ClCompile Include="..\..\ui\UIPageViewIndicator.cpp" />
     <ClCompile Include="..\..\ui\UIRelativeBox.cpp" />
     <ClCompile Include="..\..\ui\UIRichText.cpp" />
     <ClCompile Include="..\..\ui\UIScale9Sprite.cpp" />
@@ -1011,6 +1015,7 @@
     <ClInclude Include="..\..\base\ccMacros.h" />
     <ClInclude Include="..\..\base\CCMap.h" />
     <ClInclude Include="..\..\base\CCNinePatchImageParser.h" />
+    <ClInclude Include="..\..\base\CCStencilStateManager.h" />
     <ClInclude Include="..\..\base\CCNS.h" />
     <ClInclude Include="..\..\base\CCProfiling.h" />
     <ClInclude Include="..\..\base\CCProperties.h" />
@@ -1123,6 +1128,7 @@
     <ClInclude Include="..\..\editor-support\cocostudio\CSParseBinary_generated.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\DictionaryHelper.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\FlatBuffersSerialize.h" />
+    <ClInclude Include="..\..\editor-support\cocostudio\LocalizationManager.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\TriggerBase.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\TriggerMng.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\TriggerObj.h" />
@@ -1136,6 +1142,7 @@
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\GameNode3DReader\GameNode3DReader.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\ImageViewReader\ImageViewReader.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\LayoutReader\LayoutReader.h" />
+    <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\Light3DReader\Light3DReader.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\ListViewReader\ListViewReader.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\LoadingBarReader\LoadingBarReader.h" />
     <ClInclude Include="..\..\editor-support\cocostudio\WidgetReader\Node3DReader\Node3DReader.h" />
@@ -1521,34 +1528,34 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <TargetName>libcocos2d_v3.9_Windows_10.0</TargetName>
+    <TargetName>libcocos2d_v3.10_Windows_10.0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

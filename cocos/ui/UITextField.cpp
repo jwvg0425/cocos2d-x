@@ -68,6 +68,7 @@ UICCTextField * UICCTextField::create(const std::string& placeholder, const std:
 
 void UICCTextField::onEnter()
 {
+    TextFieldTTF::onEnter();
     TextFieldTTF::setDelegate(this);
 }
 
@@ -122,7 +123,7 @@ void UICCTextField::insertText(const char*  text, size_t len)
                 // password
                 if (_passwordEnabled)
                 {
-                    setPasswordText(getString().c_str());
+                    setPasswordText(getString());
                 }
                 return;
             }
@@ -146,7 +147,7 @@ void UICCTextField::insertText(const char*  text, size_t len)
     {
         if (TextFieldTTF::getCharCount() > 0)
         {
-            setPasswordText(getString().c_str());
+            setPasswordText(getString());
         }
     }
 }
@@ -160,7 +161,7 @@ void UICCTextField::deleteBackward()
         // password
         if (_passwordEnabled)
         {
-            setPasswordText(_inputText.c_str());
+            setPasswordText(_inputText);
         }
     }
 }
@@ -299,7 +300,7 @@ _useTouchArea(false),
 _textFieldEventListener(nullptr),
 _textFieldEventSelector(nullptr),
 _eventCallback(nullptr),
-_passwordStyleText(""),
+_passwordStyleText("*"),
 _textFieldRendererAdaptDirty(true),
 _fontName("Thonburi"),
 _fontSize(10),
@@ -536,6 +537,11 @@ bool TextField::onTouchBegan(Touch *touch, Event *unusedEvent)
     bool pass = Widget::onTouchBegan(touch, unusedEvent);
     if (_hitted)
     {
+        if (isFocusEnabled())
+        {
+            requestFocus();
+        }
+
         _textFieldRenderer->attachWithIME();
     }
     else
@@ -570,6 +576,8 @@ int TextField::getMaxLength()const
 void TextField::setPasswordEnabled(bool enable)
 {
     _textFieldRenderer->setPasswordEnabled(enable);
+    if (enable)
+        setPasswordStyleText(getPasswordStyleText());
 }
 
 bool TextField::isPasswordEnabled()const
@@ -856,6 +864,27 @@ TextVAlignment TextField::getTextVerticalAlignment() const
 {
     return _textFieldRenderer->getVerticalAlignment();
 }
+    
+void TextField::setCursorEnabled(bool enabled)
+{
+    _textFieldRenderer->setCursorEnabled(enabled);
+}
+    
+void TextField::setCursorChar(char cursor)
+{
+    _textFieldRenderer->setCursorChar(cursor);
+}
+
+void TextField::setCursorPosition(std::size_t cursorPosition)
+{
+    _textFieldRenderer->setCursorPosition(cursorPosition);
+}
+
+void TextField::setCursorFromPoint(const Vec2 &point, const Camera* camera)
+{
+    _textFieldRenderer->setCursorFromPoint(point, camera);
+}
+
 
 }
 

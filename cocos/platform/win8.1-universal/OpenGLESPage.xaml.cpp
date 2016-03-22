@@ -17,7 +17,7 @@
 */
 
 #include "App.xaml.h"
-#include "OpenGLESPage.xaml.h"
+#include "platform/win8.1-universal/OpenGLESPage.xaml.h"
 
 using namespace CocosAppWinRT;
 using namespace cocos2d;
@@ -155,7 +155,7 @@ void OpenGLESPage::CreateRenderSurface()
 {
     if (mOpenGLES && mRenderSurface == EGL_NO_SURFACE)
     {
-        // The app can configure the the SwapChainPanel which may boost performance.
+        // The app can configure the SwapChainPanel which may boost performance.
         // By default, this template uses the default configuration.
         mRenderSurface = mOpenGLES->CreateSurface(swapChainPanel, nullptr, nullptr);
 
@@ -385,13 +385,10 @@ void OpenGLESPage::OnPointerWheelChanged(Object^ sender, PointerEventArgs^ e)
 
 void OpenGLESPage::OnKeyPressed(CoreWindow^ sender, KeyEventArgs^ e)
 {
-    if (!e->KeyStatus.WasKeyDown)
+    //log("OpenGLESPage::OnKeyPressed %d", e->VirtualKey);
+    if (mRenderer)
     {
-        //log("OpenGLESPage::OnKeyPressed %d", e->VirtualKey);
-        if (mRenderer)
-        {
-            mRenderer->QueueKeyboardEvent(WinRTKeyboardEventType::KeyPressed, e);
-        }
+        mRenderer->QueueKeyboardEvent(WinRTKeyboardEventType::KeyPressed, e);
     }
 }
 

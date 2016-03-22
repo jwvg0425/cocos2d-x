@@ -39,6 +39,7 @@ set(COCOS_CS_SRC
   editor-support/cocostudio/CCUtilMath.cpp
   editor-support/cocostudio/CocoLoader.cpp
   editor-support/cocostudio/DictionaryHelper.cpp
+  editor-support/cocostudio/LocalizationManager.cpp
   editor-support/cocostudio/TriggerBase.cpp
   editor-support/cocostudio/TriggerMng.cpp
   editor-support/cocostudio/TriggerObj.cpp
@@ -74,6 +75,7 @@ set(COCOS_CS_SRC
   editor-support/cocostudio/WidgetReader/ButtonReader/ButtonReader.cpp
   editor-support/cocostudio/WidgetReader/ScrollViewReader/ScrollViewReader.cpp
   editor-support/cocostudio/WidgetReader/GameNode3DReader/GameNode3DReader.cpp
+  editor-support/cocostudio/WidgetReader/Light3DReader/Light3DReader.cpp
   editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp
   editor-support/cocostudio/ActionTimeline/CCActionTimeline.cpp
   editor-support/cocostudio/ActionTimeline/CCActionTimelineNode.cpp
@@ -85,6 +87,7 @@ set(COCOS_CS_SRC
   editor-support/cocostudio/ActionTimeline/CCSkinNode.cpp
   editor-support/cocostudio/FlatBuffersSerialize.cpp
   editor-support/cocostudio/WidgetReader/ArmatureNodeReader/ArmatureNodeReader.cpp
+  editor-support/cocostudio/WidgetReader/TabControlReader/TabControlReader.cpp 
 )
 
 include_directories( editor-support )
